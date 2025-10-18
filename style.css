@@ -1,0 +1,346 @@
+* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    width: 75px;
+    height: 30px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 40px;
+    font-size: 16px;
+}
+
+.nav-menu .link a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav-menu .link a:hover {
+    opacity: 0.7;
+}
+
+.nav-button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-button:hover {
+   color: #ddd;
+}
+
+/* Главная секция */
+.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 80px 0;
+    min-height: 70vh;
+}
+
+.name_home {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.grey_text_home {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 400px;
+}
+
+.button-getstart {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.img_home img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* Секция Skills */
+.skills-section {
+    padding: 80px 0;
+    border-top: 1px solid #eee;
+}
+
+.zagolovki {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #000;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.skills_card {
+    background: #f8f8f8;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.skills_card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.name_card {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.grey_text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.skills-button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Адаптивность для Skills */
+@media (max-width: 968px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Секция About Us */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 80px 0;
+    border-top: 1px solid #eee;
+}
+
+.grey_text_about {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.about-img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Секция Pricing */
+.pricing {
+    padding: 80px 0;
+    border-top: 1px solid #eee;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.pricing_card {
+    background: #f8f8f8;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #eee;
+}
+
+.pricing_card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 25px;
+}
+
+.price-tag {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin-top: 20px;
+}
+
+.price-tag span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #666;
+}
+
+/* Секция Contact Us */
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 80px 0;
+    border-top: 1px solid #eee;
+}
+
+.contact-img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.contact-form {
+    display: flex;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.contact-form input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.contact-form button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Подвал */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+    margin-top: 40px;
+}
+
+.logo_footer {
+    height: 30px;
+    width: 75px;
+}
+
+.footer_text {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Адаптивность */
+@media (max-width: 968px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .home,
+    .about,
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .contact-form {
+        flex-direction: column;
+    }
+}
